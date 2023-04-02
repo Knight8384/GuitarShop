@@ -13,27 +13,22 @@ namespace Beginning_Project
             string ownerName;
             int randomNumber = random.Next(4);
 
-            if (randomNumber == 0)
+            switch (randomNumber)
             {
-                ownerName = "Zach";
-                return ownerName;
+                case 0:
+                    ownerName = "Zach";
+                    break;
+                case 1:
+                    ownerName = "Taylor";
+                    break;
+                case 2:
+                    ownerName = "Jacob";
+                    break;
+                default:
+                    ownerName = "Chris";
+                    break;
             }
-            else if (randomNumber == 1)
-            {
-                ownerName = "Taylor";
-                return ownerName;
-            }
-            else if (randomNumber == 2)
-            {
-                ownerName = "Jacob";
-                return ownerName;
-            }
-            else
-            {
-                ownerName = "Chris";
-                return ownerName;
-            }
-
+            return ownerName;
         }
         public static string GetRandomBrand()
         {
