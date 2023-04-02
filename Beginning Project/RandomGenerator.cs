@@ -40,21 +40,20 @@ namespace Beginning_Project
             string guitarBrand;
             int randomBrand = random.Next(4);
 
-            if (randomBrand == 0)
+            switch (randomBrand)
             {
+                case 0:
                 guitarBrand = "Fender";
-            }
-            else if (randomBrand == 1)
-            {
-                guitarBrand = "Taylor";
-            }
-            else if (randomBrand == 2)
-            {
-                guitarBrand = "ZachsGuitars";
-            }
-            else
-            {
-                guitarBrand = "Squire";
+                    break;
+                case 1:
+                    guitarBrand = "Taylor";
+                    break;
+                case 2:
+                    guitarBrand = "ZachsGuitars";
+                    break;
+                default:
+                    guitarBrand = "Squire";
+                    break;
             }
             return guitarBrand;
         }
